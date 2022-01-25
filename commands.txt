@@ -87,4 +87,5 @@ create params.yaml
   134  python src/load_data.py 
   135  python src/load_data.py 
   136  python src/load_data.py 
-  138  git add . && git commit -m "load_ added "
+  138  git add . && git commit -m "load_data added "
+git push -u origin main
