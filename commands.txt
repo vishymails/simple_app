@@ -77,3 +77,14 @@ git push -u origin main
 create params.yaml
 
 
+
+128  python src/get_data.py 
+  129  python src/get_data.py 
+  130  python src/get_data.py 
+  131  git add . && git commit -m "get_data added "
+  132  git push -u origin main
+  133  python src/load_data.py 
+  134  python src/load_data.py 
+  135  python src/load_data.py 
+  136  python src/load_data.py 
+  138  git add . && git commit -m "load_ added "
