@@ -72,3 +72,8 @@ git remote add origin https://github.com/vishymails/simple_app.git
 git branch -M main
 git push -u origin main
 
+
+
+create params.yaml
+
+
