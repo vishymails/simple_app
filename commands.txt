@@ -174,3 +174,24 @@ model_dir: saved_models
    25  python setup.py sdist bdist_wheel
 
 
+
+
+35  mkdir -p prediction_service/model
+   36  mkdir webapp
+   37  touch app.py
+   38  touch prediction_service/__init__.py
+   39  touch prediction_service/prediction.py
+   40  mkdir -p webapp/static/css
+   41  mkdir -p webapp/static/script
+   42  touch webapp/static/css/main.css
+   43  touch webapp/static/script/index.js
+  
+   46  touch webapp/templates/index.hmtl
+   47  mkdir webapp/templates
+   48  mkdir webapp/templates
+   50  touch webapp/templates/index.html
+   51  touch webapp/templates/404.html
+   52  touch webapp/templates/base.html
+
+  git add . && git commit -m "webapp added and updated"
+  git push origin main
