@@ -203,4 +203,25 @@ model_dir: saved_models
    62    git push origin main
 
 
+
+update app.py
+
+cp saved_models/model.joblib prediction_service/model/
+
+python app.py
+
+
+  73  pyhton app.py
+   74  python app.py
+   75  pip install jupyterlab
+   76  jupyter-lab notebooks/
+   77  python app.py
+   78  jupyter-lab notebooks/
+   79  python app.py
+   80  git add . && git commit -m "webapp page updated1"
+   81  pip install jupyterlab
+   82    git push origin main
+
+
+
    
