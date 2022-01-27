@@ -139,3 +139,18 @@ model_dir: saved_models
    79  dvc metrics diff
 
    
+
+   test case using tox framework
+
+   1  clear
+    2  touch tox.ini
+    3  pytest -v
+    4  mkdir tests
+    5  touch tests/conftest.py
+    6  touch tests/test_config.py
+    7  tests/__init__.py
+    8  pytest -v
+
+    tox
+
+    
