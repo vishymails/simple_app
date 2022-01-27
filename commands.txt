@@ -148,9 +148,29 @@ model_dir: saved_models
     4  mkdir tests
     5  touch tests/conftest.py
     6  touch tests/test_config.py
-    7  tests/__init__.py
+    7  touch tests/__init__.py
     8  pytest -v
 
+    running tox 
+  
     tox
 
-    
+
+
+    rebuild env for tox
+
+    tox -r 
+
+
+
+ 23  pip install -e .
+   24  pip freeze
+
+
+
+
+   build your own packages for distribution 
+
+   25  python setup.py sdist bdist_wheel
+
+
