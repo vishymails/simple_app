@@ -1,10 +1,8 @@
 action: GLOB, msg: packaging
 cwd: /Users/apple/Documents/CLASSROOM/AI/mlops/simple_app
-cmd: /Users/apple/opt/anaconda3/envs/wineq2/bin/python3.8 setup.py sdist --formats=zip --dist-dir /Users/apple/Documents/CLASSROOM/AI/mlops/simple_app/.tox/dist
+cmd: /Users/apple/opt/anaconda3/envs/wineq2/bin/python3.8 setup.py sdist --formats=zip --dist-dir .tox/dist
 running sdist
 running egg_info
-creating src.egg-info
-writing manifest file 'src.egg-info/SOURCES.txt'
 writing manifest file 'src.egg-info/SOURCES.txt'
 warning: sdist: standard file not found: should have one of README, README.rst, README.txt, README.md
 
@@ -30,8 +28,7 @@ copying src.egg-info/top_level.txt -> src-0.0.1/src.egg-info
 copying tests/__init__.py -> src-0.0.1/tests
 copying tests/conftest.py -> src-0.0.1/tests
 copying tests/test_config.py -> src-0.0.1/tests
-creating /Users/apple/Documents/CLASSROOM/AI/mlops/simple_app/.tox/dist
-creating '/Users/apple/Documents/CLASSROOM/AI/mlops/simple_app/.tox/dist/src-0.0.1.zip' and adding 'src-0.0.1' to it
+creating '.tox/dist/src-0.0.1.zip' and adding 'src-0.0.1' to it
 adding 'src-0.0.1'
 adding 'src-0.0.1/tests'
 adding 'src-0.0.1/src.egg-info'
