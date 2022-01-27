@@ -107,4 +107,35 @@ update stage 1 in dvc.yaml file
 
    dvc repro
 
+
+   create train_and_evaluate.py
+
+   dvc repro
+
+   70  git add . && git commit -m "train and evaluate updated"
+   71  git push origin main
+
+
+   72  dvc metrics show
+   
+   73  dvc params diff
+   
+   75  dvc metrics diff
+   
+   change params.yaml
+
+   estimators:
+  ElasticNet:
+    params:
+  ->  alpha: 0.88
+  ->  l1_ratio: 0.89
+      # alpha: 0.9
+      # l1_ratio: 0.4
+model_dir: saved_models
+
+   76  dvc repro
+   77  dvc params diff
+   78  dvc metrics show
+   79  dvc metrics diff
+
    
