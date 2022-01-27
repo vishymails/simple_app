@@ -89,3 +89,22 @@ create params.yaml
   136  python src/load_data.py 
   138  git add . && git commit -m "load_data added "
 git push -u origin main
+
+
+update stage 1 in dvc.yaml file 
+
+
+ 43  dvc repro
+   44  git rm -r --cached 'data/raw/winequality.csv'
+   45              git commit -m "stop tracking data/raw/winequality.csv" 
+   46  dvc repro
+   47  dvc repro
+   48  dvc repro
+   49  git add . && git commit -m "stage1 added"
+   50  git push origin main
+
+   create split_data.py and add stage in dvc.yaml
+
+   dvc repro
+
+   
