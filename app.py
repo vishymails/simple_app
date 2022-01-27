@@ -29,8 +29,19 @@ def predict(data) :
     model = joblib.load(model_dir_path)
     prediction = model.predict(data)
     print(prediction)
-    return prediction
+    return prediction[0]
 
+
+def api_response(request) :
+    try :
+        data = np.array([list(request.json.values())])
+        response = predict(data)
+        response = {"response" : response}
+        return response
+    except Exception as e :
+        print(e)
+        error = {"error" : "Something went wrong !! try again"}
+        return error
 
 
 @app.route("/", methods= ["GET", "POST"])
@@ -43,7 +54,9 @@ def index() :
                 response = predict(data)
                 return render_template("index.html", response= response)
             elif request.json :
-                pass
+                response = api_response(request)
+                return jsonify(response)
+
         except Exception as e :
             print(e)
             error = {"error" : "Something went wrong !! try again"}
