@@ -223,5 +223,49 @@ python app.py
    82    git push origin main
 
 
+ 22  mkdir .github/workflows/
+   23  mkdir -p .github/workflows/
+   24  touch .github/workflows/ci-cd.yaml
+   25  git add . && git commit -m "github action workflow added" 
+   26  git push origin main 
+   27  dvc repro
+   28  git add . && git commit -m "github action workflow added1" 
+   29  git push origin main 
+   30  touch Procfile
+   31  git add . && git commit -m "github action workflow added2" 
+   32  git push origin main 
+
 
    
+
+
+
+
+
+   CONFIGURING MLFLOW + DVC + GITHUB ACTIONS 
+
+
+   git checkout -b main-mlflow
+
+
+
+
+update train_and_evaluate.py
+update dvc.yaml
+update params.yaml
+
+run mlflow server to start collecting data 
+
+
+mkdir artifacts 
+
+
+mlflow server \
+    --backend-store-uri sqlite:///mlflow.db \
+    --default-artifact-root ./artifacts \
+    --host 0.0.0.0 -p 1234
+
+
+
+git add . && git commit -m "mlflow added " 
+git push origin main-mlflow 
