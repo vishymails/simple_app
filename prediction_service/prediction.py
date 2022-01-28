@@ -76,10 +76,10 @@ def form_response(dict_request) :
         return response
 
 
-def api_response(request) :
+def api_response(dict_request) :
     try :
         if validate_input(dict_request) :
-            data = np.array([list(request.json.values())])
+            data = np.array([list(dict_request.json.values())])
             response = predict(data)
             response = {"response" : response}
             return response
